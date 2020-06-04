@@ -43,7 +43,7 @@ local globalKeys =
     {description = 'show main menu', group = 'awesome'}
   ),
   awful.key(
-    {altkey},
+    {modkey},
     'space',
     function()
       _G.screen.primary.left_panel:toggle(true)
@@ -135,38 +135,40 @@ local globalKeys =
   ),
   awful.key({modkey, 'Control'}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
   awful.key({modkey, 'Control'}, 'q', _G.awesome.quit, {description = 'quit awesome', group = 'awesome'}),
-  awful.key(
-    {altkey, 'Shift'},
-    'Right',
-    function()
-      awful.tag.incmwfact(0.05)
-    end,
-    {description = 'increase master width factor', group = 'layout'}
-  ),
-  awful.key(
-    {altkey, 'Shift'},
-    'Left',
-    function()
-      awful.tag.incmwfact(-0.05)
-    end,
-    {description = 'decrease master width factor', group = 'layout'}
-  ),
-  awful.key(
-    {altkey, 'Shift'},
-    'Down',
-    function()
-      awful.client.incwfact(0.05)
-    end,
-    {description = 'decrease master height factor', group = 'layout'}
-  ),
-  awful.key(
-    {altkey, 'Shift'},
-    'Up',
-    function()
-      awful.client.incwfact(-0.05)
-    end,
-    {description = 'increase master height factor', group = 'layout'}
-  ),
+
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Right',
+  --   function()
+  --     awful.tag.incmwfact(0.05)
+  --   end,
+  --   {description = 'increase master width factor', group = 'layout'}
+  -- ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Left',
+  --   function()
+  --     awful.tag.incmwfact(-0.05)
+  --   end,
+  --   {description = 'decrease master width factor', group = 'layout'}
+  -- ),  
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Down',
+  --   function()
+  --     awful.client.incwfact(0.05)
+  --   end,
+  --   {description = 'decrease master height factor', group = 'layout'}
+  -- ),
+  -- awful.key(
+  --   {altkey, 'Shift'},
+  --   'Up',
+  --   function()
+  --     awful.client.incwfact(-0.05)
+  --   end,
+  --   {description = 'increase master height factor', group = 'layout'}
+  -- ),
+
   awful.key(
     {modkey, 'Shift'},
     'Left',
@@ -200,7 +202,7 @@ local globalKeys =
     {description = 'decrease the number of columns', group = 'layout'}
   ),
   awful.key(
-    {modkey},
+    {altkey},
     'space',
     function()
       awful.layout.inc(1)
@@ -208,7 +210,7 @@ local globalKeys =
     {description = 'select next', group = 'layout'}
   ),
   awful.key(
-    {modkey, 'Shift'},
+    {altkey, 'Shift'},
     'space',
     function()
       awful.layout.inc(-1)

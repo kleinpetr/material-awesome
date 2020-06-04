@@ -17,15 +17,15 @@ local tags = {
     screen = 1
   },
   {
-    icon = icons.social,
-    type = 'social',
-    defaultApp = apps.default.social,
+    icon = icons.gimp,
+    type = 'design',
+    defaultApp = apps.default.gimp,
     screen = 1
   },
   {
-    icon = icons.game,
-    type = 'game',
-    defaultApp = apps.default.game,
+    icon = icons.drawing,
+    type = 'draw',
+    defaultApp = apps.default.drawing,
     screen = 1
   },
   {
@@ -35,9 +35,21 @@ local tags = {
     screen = 1
   },
   {
+    icon = icons.game,
+    type = 'game',
+    defaultApp = apps.default.game,
+    screen = 1
+  },
+  {
     icon = icons.music,
     type = 'music',
     defaultApp = apps.default.music,
+    screen = 1
+  },
+  {
+    icon = icons.social,
+    type = 'social',
+    defaultApp = apps.default.social,
     screen = 1
   },
   {

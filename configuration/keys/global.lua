@@ -46,9 +46,10 @@ local globalKeys =
     {modkey},
     'space',
     function()
-      _G.screen.primary.left_panel:toggle(true)
+      -- _G.screen.primary.left_panel:toggle(true)
+      awful.spawn('nextkblayout')
     end,
-    {description = 'show main menu', group = 'awesome'}
+    {description = 'toggling keyboard layouts', group = 'awesome'}
   ),
   awful.key({modkey}, 'u', awful.client.urgent.jumpto, {description = 'jump to urgent client', group = 'client'}),
   awful.key(

@@ -1,4 +1,0 @@
-#!/bin/bash
-google-chrome --new-window "pohrebni-operator.slack.com" &
-google-chrome --new-window "web.whatsapp.com" &
-google-chrome --new-window "https://messages.google.com/web" &

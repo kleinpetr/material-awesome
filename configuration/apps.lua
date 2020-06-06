@@ -8,7 +8,7 @@ local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. wit
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'mate-terminal',
+    terminal = 'mate-terminal --window',
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'mate-terminal',
@@ -19,11 +19,11 @@ return {
     -- Editing these also edits the default program
     -- associated with each tag/workspace
     browser = 'google-chrome',
-    editor = 'code-insiders', -- gui text editor
-    social = '~/.config/awesome/configuration/utils/message_apps',
+    editor = 'code', -- gui text editor
+    social = 'messageapps',
     game = rofi_command,
     files = 'nautilus -w',
-    music = 'spotify',
+    music = 'google-chrome --app-id=pjibgclleladliembfgfagdaldikeohf',
     drawing = 'google-chrome --app-id=kmcnjdcipmgchfndpapkoecbidofdpbc',
     gimp = 'gimp',
   },

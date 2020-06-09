@@ -6,6 +6,8 @@ local hotkeys_popup = require('awful.hotkeys_popup').widget
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
+local naughty = require('naughty')
+
 -- Key bindings
 local globalKeys =
   awful.util.table.join(
@@ -47,7 +49,12 @@ local globalKeys =
     'space',
     function()
       -- _G.screen.primary.left_panel:toggle(true)
-      awful.spawn('nextkblayout')
+      awful.spawn.easy_async_with_shell('nextkblayout', function(out)
+        -- naughty.notify({
+        --   title = 'Keyboard layout switched',
+        --   text = out
+        -- })
+      end)
     end,
     {description = 'toggling keyboard layouts', group = 'awesome'}
   ),
@@ -130,7 +137,7 @@ local globalKeys =
     {modkey},
     'x',
     function()
-      awful.spawn(apps.default.terminal)
+      -- awful.spawn(apps.default.terminal)
     end,
     {description = 'open a terminal', group = 'launcher'}
   ),
